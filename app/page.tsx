@@ -1,8 +1,13 @@
 import directus from '../lib/directus';
 
+type Globals = {
+    title?: string;
+    description?: string;
+}
+
 async function getGlobals() {
 	const { data } = await directus.items('globals').readByQuery();
-	return data;
+	return data as Globals;
 }
 
 export default async function HomePage() {

@@ -1,6 +1,6 @@
 import BlockHero from "./blocks/hero";
 import BlockTeam from "./blocks/team";
-export default async function PageBuilder({ blocks }) {
+export default function PageBuilder({ blocks }) {
     const mapping = {
         'block_hero': BlockHero,
         'block_team': BlockTeam

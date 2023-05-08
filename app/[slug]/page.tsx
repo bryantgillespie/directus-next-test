@@ -24,8 +24,6 @@ export default async function DynamicPage({ params }) {
 	const page = await getPage(params.slug);
 	return (
 		<div>
-			{/* <h1>{page.title}</h1> */}
-            {/* <pre>{JSON.stringify(page, null, 4)}</pre> */}
             <PageBuilder blocks={page.blocks} />
 		</div>
 	);
